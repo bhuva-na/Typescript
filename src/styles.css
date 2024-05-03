@@ -1,0 +1,27 @@
+div {
+  text-align: center;
+  background-color: rgb(239, 247, 247);
+}
+
+.single__text{
+    flex:1;
+    padding: 5px;
+    border:none;
+    font-size: 20px;
+
+}
+
+.single__todo{
+    display: flex;
+  width: 29.5%;
+  border-radius: 5px;
+  padding: 20px;
+  margin-top: 15px;
+  background-color: rgb(150, 201, 201);
+  margin-left:35%;
+}
+.icon{
+    margin-left: 10px;
+    font-size: 25px;
+    cursor: pointer;
+}

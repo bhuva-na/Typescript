@@ -1,24 +1,37 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import InputFeilds from "./components/InputFeilds";
+import { Totos } from "./model";
+import { Badge } from "react-bootstrap";
+import TodoList from "./components/TodoList";
+import "./styles.css";
 
 function App() {
+  let [todo, settodo] = useState<string>("");
+  const [todos, settodos] = useState<Totos[]>([]);
+
+  let handletodo = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (todo) {
+      settodos([
+        ...todos,
+        {
+          id: Date.now(),
+          todo,
+          isDone: false,
+        },
+      ]);
+      settodo("");
+    }
+  };
+  console.log(todos);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h2>
+        <Badge bg="secondary">MY TASKS</Badge>
+      </h2>
+      <InputFeilds todo={todo} settodo={settodo} handletodo={handletodo} />
+      <TodoList  todos={todos} settodos={settodos} />
+      
     </div>
   );
 }
