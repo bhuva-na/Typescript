@@ -27,7 +27,7 @@ function App() {
   return (
     <div>
       <h2>
-        <Badge bg="secondary">MY TASKS</Badge>
+        <Badge bg="secondary">MY TASK</Badge>
       </h2>
       <InputFeilds todo={todo} settodo={settodo} handletodo={handletodo} />
       <TodoList  todos={todos} settodos={settodos} />
