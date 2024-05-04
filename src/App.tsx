@@ -1,13 +1,13 @@
 import { useState } from "react";
 import InputFeilds from "./components/InputFeilds";
-import { Totos } from "./model";
+import { Todos } from "./model";
 import { Badge } from "react-bootstrap";
 import TodoList from "./components/TodoList";
 import "./styles.css";
 
 function App() {
   let [todo, settodo] = useState<string>("");
-  const [todos, settodos] = useState<Totos[]>([]);
+  const [todos, settodos] = useState<Todos[]>([]);
 
   let handletodo = (e: React.FormEvent) => {
     e.preventDefault();

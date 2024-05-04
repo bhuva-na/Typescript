@@ -1,12 +1,12 @@
 import React, { useState } from "react";
-import { Totos } from "../model";
+import { Todos } from "../model";
 import "../styles.css";
 import { MdDelete, MdEdit } from "react-icons/md";
 
 type props = {
-  todo: Totos;
-  todos: Totos[];
-  settodos: React.Dispatch<React.SetStateAction<Totos[]>>;
+  todo: Todos;
+  todos: Todos[];
+  settodos: React.Dispatch<React.SetStateAction<Todos[]>>;
 };
 
     const SingleTodo = ({ todo, todos, settodos }: props) => {
